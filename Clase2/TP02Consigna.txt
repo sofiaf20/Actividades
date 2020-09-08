@@ -1,0 +1,58 @@
+¡Hola estudiantes! Este es el primer trabajo de investigación que van realizar. 
+Cuando digo que es de investigación es porque incluso se van a basar en un "paper" para encontrar la mejor
+solución al problema. 
+Basándose en el ejemplo de la clase: 
+
+Clase 2: Ejemplo de Menú
+Gabriel Nicolás González Ferreira
+•
+19 ago. (Editado: 19 ago.)
+Vamos a hacer un ejemplo completo que use arreglos (“arrays”), y estructuras (“struct”) y que además manipule strings. 
+La idea va a ser la siguiente: Crearemos un programa que pueda almacenar datos de hasta 1000 archivos (archivos de 
+computadora). Para cada archivo, debe guardar los  siguientes datos: Nombre del archivo (max 40 letras), 
+Tamaño (en KB, número de 0 a 2.000.000.000). El programa mostrará un menú que permita al usuario las siguientes operaciones:
+
+1- Añadir datos de un nuevo archivo
+2- Mostrar los nombres de todos los archivos almacenados
+3- Mostrar archivos que sean de más de un cierto tamaño (por ejemplo, 2000 KB).
+4- Ver todos los datos de un cierto archivo (a partir de su nombre)
+5- Salir de la aplicación (como todavía no sabemos almacenar los datos, éstos se perderán).
+
+No debería resultar difícil. Vamos a ver directamente una de las formas en que se podría plantear y luego comentaremos alguna
+de las mejoras que se podría (incluso se debería) hacer.
+
+Una opción que podemos a tomar para resolver este problema es la de contar el número de archivos que tenemos almacenados, y 
+así podremos añadir de uno en uno. 
+
+Si tenemos 0 archivos, deberemos almacenar la siguiente (la primera) en la posición 0; si tenemos dos archivos, serán la 0 y 
+la 1, luego añadiremos en la posición 2; en general, si tenemos “n” archivos, añadiremos cada nueva ficha en la posición “n”.
+ Por otra parte, para revisar todas las archivos, recorreremos desde la posición 0 hasta la n-1, haciendo algo como:
+for (i=0; i<=n-1; i++) { //... más órdenes ... }
+
+O algo como:
+for (i=0; i<n; i++) { //... más órdenes ... }
+
+El resto del programa no es difícil: sabemos leer y comparar textos y números. 
+Sólo haremos dos consideraciones:
+         -No se comportará correctamente si los textos (nombre del archivo, por ejemplo) contienen espacios, porque aún no 
+	sabemos leer textos con espacios.
+         -Hemos limitado el número de archivos a 1000, así que, si nos piden añadir, deberíamos asegurarnos antes de que 
+	todavía tenemos hueco disponible.
+
+Con todo esto, nuestro fuente quedaría cómo en el vínculo adjunto.
+
+
+
+
+deben resolver el problema de persistencia a archivos en C++, osea que las estructuras de datos deben persistir en archivos. 
+Hay diversos tutoriales en internet para resolver el problema, vamos a trabajar en clase y además pueden usar lo aprendido 
+en la materia Algoritmos y Estructuras de Datos I. Pero cómo dato voy a dejarles un paper que propone soluciones a esta 
+problemática. Cómo toda investigación los resultados o el material analizado puede contener errores, pero lo importante es 
+buscar alternativas (de las cuales uds, las/os milenials, tienen en abundancia) en los medios digitales de los cuales 
+disponen. Cómo entrega adjunten el código funcionando (cumplir corrección mínimo) y la documentación y fuente de donde hayan
+complementado su solución.
+
+
+
+//Tenemos que encontrar una forma de guardar datos en un archivo de texto, y el programa luego sea capas de leerlo, con el
+ ejemplo. Puede ser un archivo de texto o un binario. Investigar.
